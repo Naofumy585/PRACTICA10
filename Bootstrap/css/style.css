@@ -2,34 +2,160 @@
     padding: 0;
     margin: 0;
     border-radius: 7px; /* Ajusta este valor según tus preferencias */
+    box-sizing: border-box;
 }
 
-article  {
-    background-image: url(/img/fondo_fontaine.webp);
+body {
+    transition: background-color 20s ease; /* Transición suave para el cambio de color de fondo */
+    
+}
 
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff; /* Color de texto en modo nocturno */
+}
+
+.table-dark th{
+    color: #020202; /* Color de texto en modo nocturno para las celdas de la tabla */
+}
+.table-dark td {
+    color: #020202; /* Color de texto en modo nocturno para las celdas de la tabla */
+}
+
+/* Estilos específicos para el modo nocturno */
+body.dark-mode {
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo en modo nocturno con 50% de transparencia */
+    color: #fff; /* Color de texto en modo nocturno para el contenido general */
+}
+
+body.dark-mode .navbar-dark {
+    background-color: #222; /* Color de fondo en modo nocturno para la barra de navegación */
+}
+
+body.dark-mode .table-dark {
+    background-color: rgba(27, 177, 204, 0.473); /* Color de fondo en modo nocturno para la tabla con 50% de transparencia */
+}
+
+article {
+    background-image: url(/img/fondo_fontaine.webp);
 }
 
 nav {
-    background-color: #139fb85b;
+    background-color: #2195f398;
+    font-style: ;
 }
 
 img {
     height: 100px;
     width: auto;
 }
+
 ul li:hover {
-    background-color: #0e6edba4; /* Cambia el color a tu preferencia */
+    background-color: #2196F3; /* Cambia el color a tu preferencia */
     color: #10539e; /* Cambia el color del texto a tu preferencia */
 }
+
 table:hover {
-    background-color: rgba(27, 177, 204, 0.473); /* Fondo transparente */
+    background-color: rgba(27, 177, 204, 0.473); /* Fondo transparente con 50% de transparencia */
 }
 
 table:hover th,
 table:hover td {
     background-color: #ebebeb00; /* Color de fondo resaltado para celdas */
-    color: black; /* Color del texto resaltado */
+    color: white; /* Color del texto resaltado */
 }
+
+@keyframes firefly {
+    0% {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.801),
+                    0 0 20px 10px rgba(212, 12, 196, 0.808),
+                    0 0 30px 15px rgba(29, 4, 253, 0.877);
+    }
+    50% {
+        box-shadow: 0 0 10px 5px rgba(13, 124, 228, 0.877),
+                    0 0 20px 10px rgba(7, 202, 170, 0.3),
+                    0 0 30px 15px rgba(17, 224, 231, 0.836),
+                    20px 0 40px 20px rgba(35, 202, 30, 0.918);
+    }
+    100% {
+        box-shadow: 0 0 10px 5px rgba(228, 224, 10, 0.925),
+                    0 0 20px 10px rgba(241, 117, 0, 0.3),
+                    0 0 30px 15px rgb(248, 0, 0);
+    }
+}
+
+table {
+    animation: firefly 20s infinite; /* Ajusta la duración según sea necesario */
+}
+
+/* Estilos para el botón switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+div p{
+    text-align: justify;
+}
+
 footer {
-    /* Puedes agregar estilos adicionales para el pie de página aquí si es necesario */
+    background-color: #2195f398; /* Color de fondo del footer */
+    padding: 20px; /* Espaciado interno del footer */
+    color: #181717; /* Color de texto en el footer */
+}
+
+body.dark-mode footer {
+    background-color: #222; /* Color de fondo del footer en modo nocturno */
+    color: #fff; /* Color de texto en modo nocturno */
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Espaciado interno del footer */
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
 }

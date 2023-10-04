@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Inicio</a>
@@ -25,6 +25,12 @@
                 <li class="nav-item">
                     <a class="nav-link disable" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
                 </li>
+                 <li class="nav-item">
+                    <label class="switch">
+                        <input type="checkbox" onclick="toggleDarkMode()">
+                        <span class="slider"></span>
+                    </label>
+                </li>
             </ul>
         </nav>
     </header>
@@ -36,7 +42,7 @@
                 los secretos del mundo mágico de Teyvat.
                 <img src="/img/fontaine_1.gif" class="rounded d-block">
             </p>
-            <table class="table">
+            <table class="table" style="">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">Personaje</th>
@@ -45,7 +51,7 @@
                         <th scope="col">¿Donde esta?</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     <tr>
                         <th scope="row">1</th>
                         <td>"Viajero"
@@ -71,8 +77,8 @@
                         <td>"Shogun"
                             <img src="/img/Personaje/Shogun.gif" class="rounded d-block">
                         </td>
-                        <td>Electro
-                            <img src="/img/ELemento/Electro.png" class="rounded d-block">
+                        <td >Electro
+                            <img src="/img/ELemento/Electro.png" class="rounded d-block" >
                         </td>
                         <td>Inazuma
                             <img src="/img/Lugar/Inazuma.webp" alt="" class="rounded d-block" class="card-img-top">
@@ -83,31 +89,47 @@
             <div class="row">
                 <div class="col-4">
                     <div class="card-body">
-                        <h5 class="card-title">Compiladores</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
-                        <p class="card-text">Texto.</p>
-                        <a href="#" class="card-link">Link 1</a>
+                        <h5 class="card-title">Pagina oficial</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Comunidad de hoyolab</h6>
+                        <p class="card-text">¿Que es hoyolab?:  HoYoLAB es una comunidad que recoge noticias, contenido creado por los fans, herramientas de todo tipo, ventajas exclusivas y muchos otros contenidos</p>
+                        <a href="https://www.hoyolab.com/home" class="card-link">"Ingresa Aqui"</a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card-body">
-                        <h5 class="card-title">Contabilidad</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
-                        <p class="card-text">Texto.</p>
-                        <a href="#" class="card-link">Link 2</a>
+                        <h5 class="card-title">Canal de YouTube</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Descubre Contenido Exclusivo</h6>
+                        <p class="card-text">Explora nuestro canal de YouTube para encontrar videos emocionantes y educativos. Suscríbete para no perderte ninguna actualización y sé parte de nuestra comunidad.</p>
+                        <a href="https://www.youtube.com/@GenshinImpact/featured" class="card-link">Ver Videos</a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card-body">
-                        <h5 class="card-title">Base de Datos</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
-                        <p class="card-text">Texto.</p>
-                        <a href="#" class="card-link">Link 3</a>
+                        <h5 class="card-title">Página de Facebook</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Conéctate con Nosotros</h6>
+                        <p class="card-text">Síguenos en Facebook para mantenerte informado sobre las últimas noticias, eventos y publicaciones. Únete a la conversación y forma parte de nuestra creciente comunidad en línea.</p>
+                        <a href=" https://www.facebook.com/GenshinImpact/" class="card-link">Seguir en Facebook</a>
                     </div>
                 </div>
             </div>
         </div>
     </article>
-    <footer></footer>
+    <footer>
+        <div class="footer-section" >
+            <div class="footer-left">
+                <h5 class="card-title"><b> Ubicación</b></h5>
+                <p>Tuxtla Gutiérrez</p>
+            </div>
+            <div class="footer-center">
+                <h5 class="card-title"><b> Contacto</b></h5>
+                <p>Correo Electrónico</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
