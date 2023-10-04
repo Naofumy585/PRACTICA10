@@ -1,10 +1,35 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    border-radius: 7px; /* Ajusta este valor según tus preferencias */
 }
-article{
-    background-color:rgb(199, 247, 247) ;
+
+article  {
+    background-image: url(/img/fondo_fontaine.webp);
+
 }
+
 nav {
-    background-color: rgb(56, 55, 55);
+    background-color: #139fb85b;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}
+ul li:hover {
+    background-color: #0e6edba4; /* Cambia el color a tu preferencia */
+    color: #10539e; /* Cambia el color del texto a tu preferencia */
+}
+table:hover {
+    background-color: rgba(27, 177, 204, 0.473); /* Fondo transparente */
+}
+
+table:hover th,
+table:hover td {
+    background-color: #ebebeb00; /* Color de fondo resaltado para celdas */
+    color: black; /* Color del texto resaltado */
+}
+footer {
+    /* Puedes agregar estilos adicionales para el pie de página aquí si es necesario */
 }
